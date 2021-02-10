@@ -8,7 +8,7 @@ module.exports.client = client
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 client.on('ready', () => {
-    console.log('Siap baku dusu')
+    console.log('Siap baku dusu')//wkwkwk
 })
 
 for (const file of commandFiles) {
@@ -34,7 +34,7 @@ client.on('message', async message => {
     if(message.content === '<@!'+`${client.user.id}`+'>') message.channel.send({
         embed: {
             color: 'YELLOW',
-            description: `Halo **${message.user.username}**! Prefix **${client.user.username}** Adalah **\`6!\`**`,
+            description: `Halo Ngab! Prefix **${client.user.username}** Adalah **\`6!\`**`,
             timestamp: new Date()
         }
     })
@@ -43,7 +43,7 @@ client.on('message', async message => {
     if(message.content === '<@'+`${client.user.id}`+'>') message.channel.send({
         embed: {
             color: 'YELLOW',
-            description: `Halo **${message.user.username}**! Prefix **${client.user.username}** Adalah **\`6!\`**`,
+            description: `Halo Ngab! Prefix **${client.user.username}** Adalah **\`6!\`**`,
             timestamp: new Date()
         }
     })
