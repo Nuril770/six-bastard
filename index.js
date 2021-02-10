@@ -16,13 +16,12 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command)
 }
 
-const prefix = 's!';
+const prefix = '6!';
 client.on('message', async message => {
     if (!message.content.startsWith(prefix)) return;
 
-    const args = message.content.slice(prefix.length).trim().split(/ +/);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    if(command === 'tes') message.reply(`${client.ws.ping}ms`)
 
     if (!client.commands.has(command)) return;
     try {
@@ -31,5 +30,23 @@ client.on('message', async message => {
         console.error(error);
     }
 })
+client.on('message', async message => {
+    if(message.content === '<@!'+`${client.user.id}`+'>') message.channel.send({
+        embed: {
+            color: 'YELLOW',
+            description: `Halo **${message.user.username}**! Prefix **${client.user.username}** Adalah **\`6!\`**`,
+            timestamp: new Date()
+        }
+    })
+})
+client.on('message', async message => {
+    if(message.content === '<@'+`${client.user.id}`+'>') message.channel.send({
+        embed: {
+            color: 'YELLOW',
+            description: `Halo **${message.user.username}**! Prefix **${client.user.username}** Adalah **\`6!\`**`,
+            timestamp: new Date()
+        }
+    })
+})
 
-client.login('ODA4OTI3MDQzMDg0NjE1Njkw.YCNqBA.pjpcKIfYmSzWRuUsLHo_X2Z1Ax8')
+client.login('ODA4OTI3MDQzMDg0NjE1Njkw.YCNqBA.VgDAYnhkpcc6_aA2t3XlvldC5YM')
