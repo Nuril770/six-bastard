@@ -1,1 +1,0 @@
-# six-yellow-jacket
