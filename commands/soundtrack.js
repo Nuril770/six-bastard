@@ -55,6 +55,25 @@ if(args.join(" ").toLowerCase() === '1') {
             }
         })
     }).catch(e => console.log(e))
+if(args.join(" ").toLowerCase() === '2') {
+    message.member.voice.channel.join().then(VoiceConnection => {
+        VoiceConnection.play("./soundtrack/02-Parasites.mp3").on("finish", () => VoiceConnection.disconnect({ timeout: 100000 }));
+        message.react('👌')
+        message.channel.send({
+            embed: {
+                color: 'YELLOW',
+                author: {
+                    name: 'Memutar Soundtrack'
+                },
+                description: 'Little Nightmares Soundtrack **Parasites**',
+                footer: {
+                    text: client.user.username,
+                    icon_url: client.user.avatarURL()
+                },
+                timestamp: new Date()
+            }
+        })
+    }).catch(e => console.log(e))
 }
 }
 }
