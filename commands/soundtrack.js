@@ -55,7 +55,7 @@ if(args.join(" ").toLowerCase() === '1') {
             }
         })
     }).catch(e => console.log(e))
-else if(args.join(" ").toLowerCase() === '2') {
+else(args.join(" ").toLowerCase() === '2') {
     message.member.voice.channel.join().then(VoiceConnection => {
         VoiceConnection.play("./soundtrack/02-Parasites.mp3").on("finish", () => VoiceConnection.disconnect({ timeout: 100000 }));
         message.react('👌')
