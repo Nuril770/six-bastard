@@ -8,7 +8,8 @@ module.exports.client = client
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 client.on('ready', () => {
-    console.log('Siap baku dusu')//wkwkwk
+    console.log('Siap baku dusu')
+    client.user.serActivity('with Mono💖'{ type: 'PLAYING' })
 })
 
 for (const file of commandFiles) {
