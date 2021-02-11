@@ -7,7 +7,7 @@ module.exports = {
             description: 'Perintah Memutar Soundtrack Little Nightmares',
 
 execute(message, args) {
-    let autor = message.user.username
+    let autor = message.author.username
     
     if (Math.round(parseInt(args[0])) < 1 || Math.round(parseInt(args[0])) > 24) return message.channel.send(`**${autor}**, Mohon Masukkan Nomor Soundtrack Yang Benar Antara 1 - 24 `)            
 
