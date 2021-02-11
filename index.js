@@ -50,4 +50,4 @@ client.on('message', async message => {
     })
 })
 
-client.login('Nzc0OTk1MzU4NzgxOTMxNTI2.X6f4rA.tdV6Swsg1rsbQOQ1Hso7YNpLrZg')//ODA4OTI3MDQzMDg0NjE1Njkw.YCNqBA.VgDAYnhkpcc6_aA2t3XlvldC5YM
+client.login(Nzc0OTk1MzU4NzgxOTMxNTI2.X6f4rA.tdV6Swsg1rsbQOQ1Hso7YNpLrZg')//ODA4OTI3MDQzMDg0NjE1Njkw.YCNqBA.VgDAYnhkpcc6_aA2t3XlvldC5YM
