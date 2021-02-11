@@ -7,6 +7,10 @@ module.exports = {
             description: 'Perintah Memutar Soundtrack Little Nightmares',
 
 execute(message, args) {
+    let autor = message.user.username
+    
+    if (Math.round(parseInt(args[0])) < 1 || Math.round(parseInt(args[0])) > 24) return message.channel.send(`**${autor}**, Mohon Masukkan Nomor Soundtrack Yang Benar Antara 1 - 24 `)            
+
     if (!message.member.voice.channel) return message.channel.send('Kamu tidak di VoiceChannel').then(msg => {
           msg.delete({timeout: 20000})
         });
