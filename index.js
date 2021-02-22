@@ -36,6 +36,7 @@ if(db.has(`afk-${message.author.id}+${message.guild.id}`)) {
         const info = db.get(`afk-${message.author.id}+${message.guild.id}`)
         await db.delete(`afk-${message.author.id}+${message.guild.id}`)
         message.reply(`Status AFK Kamu Telah Dihapus! (${info})`)
+}
 })
 client.on('message', async message => {
     if(message.content === '<@!'+`${client.user.id}`+'>') message.channel.send({
