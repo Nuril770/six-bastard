@@ -8,7 +8,7 @@ module.exports.client = client
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 client.on('ready', () => {
-    console.log('Siap baku dusu')
+    console.log('Siap Menghianati Kawan!')
     client.user.setActivity('Goodbye Mono!😚', { type: 'LISTENING' })
 })
 
@@ -17,7 +17,7 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command)
 }
 
-const prefix = '6!';
+const prefix = '6!'; //  <------------------------------------------------------------------- PREFIX BOT  -----------
 client.on('message', async message => {
     if (!message.content.startsWith(prefix)) return;
 
@@ -42,7 +42,7 @@ client.on('message', async message => {
     if(message.content === '<@!'+`${client.user.id}`+'>') message.channel.send({
         embed: {
             color: 'YELLOW',
-            description: `Halo Ngab! Prefix **${client.user.username}** Adalah **\`6!\`**`,
+            description: `Halo Ngab! Prefix **${client.user.username}** Adalah **\`${prefix}\`**`,
             timestamp: new Date()
         }
     })
@@ -51,10 +51,10 @@ client.on('message', async message => {
     if(message.content === '<@'+`${client.user.id}`+'>') message.channel.send({
         embed: {
             color: 'YELLOW',
-            description: `Halo Ngab! Prefix **${client.user.username}** Adalah **\`6!\`**`,
+            description: `Halo Ngab! Prefix **${client.user.username}** Adalah **\`${prefix}\`**`,
             timestamp: new Date()
         }
     })
 })
 
-client.login('ODA4OTI3MDQzMDg0NjE1Njkw.YCNqBA.VgDAYnhkpcc6_aA2t3XlvldC5YM')//
+client.login('<TokenBotKamu>')//
