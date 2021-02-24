@@ -30,14 +30,9 @@ client.on('message', async message => {
     } catch (error) {
         console.error(error);
     }
-    const db = require('quick.db')
-
-if(db.has(`afk-${message.author.id}+${message.guild.id}`)) {
-        const info = db.get(`afk-${message.author.id}+${message.guild.id}`)
-        await db.delete(`afk-${message.author.id}+${message.guild.id}`)
-        message.reply(`Status AFK Kamu Telah Dihapus! (${info})`)
 }
 })
+
 client.on('message', async message => {
     if(message.content === '<@!'+`${client.user.id}`+'>') message.channel.send({
         embed: {
@@ -47,6 +42,7 @@ client.on('message', async message => {
         }
     })
 })
+
 client.on('message', async message => {
     if(message.content === '<@'+`${client.user.id}`+'>') message.channel.send({
         embed: {
@@ -57,4 +53,4 @@ client.on('message', async message => {
     })
 })
 
-client.login('<TokenBotKamu>')//
+client.login('<TokenBotKamu>')// ---------------------- TOKEN -----------------------
